@@ -55,6 +55,8 @@ const Footer = () => {
           justifyContent: "center",
           gap: "30px",
           marginBottom: "20px",
+          flexWrap: "wrap",   
+          
         }}
       >
         <Link href="#" color="inherit" sx={{ textDecoration: "none" }}>
@@ -150,24 +152,36 @@ const Footer = () => {
           justifyContent: "center",
           alignItems: "center",
           gap: "10px",
-          borderTop: "2px solid #70696c "  // Thêm border-top cho Box ngoài cùng
+          borderTop: "2px solid #70696c", // Thêm border-top cho Box ngoài cùng
+          flexWrap: "wrap", // Cho phép các phần tử trong Box tự động xuống dòng khi cần
+          padding: "10px",
         }}
       >
+        {/* Copyright Section */}
         <Box
-          sx={{ marginTop:"30px",display: "flex", alignItems: "center"}}
+          sx={{
+            marginTop: "30px",
+            display: "flex",
+            alignItems: "center",
+            flex: "1 1 100%", // Làm cho phần này chiếm hết chiều rộng có sẵn
+            justifyContent: "center",
+          }}
         >
-          <Typography variant="body2">
+          <Typography variant="body2" sx={{ textAlign: "center" }}>
             Copyright © 2025 Instant Gaming - All rights reserved
           </Typography>
         </Box>
 
+        {/* Language/Location Section */}
         <Box
           sx={{
-            marginLeft: "200px",
             display: "flex",
             gap: "10px",
             alignItems: "center",
-            marginTop:"30px"
+            marginTop: "30px",
+            justifyContent: "center",
+            flex: "1 1 100%", // Làm cho phần này chiếm hết chiều rộng có sẵn
+
           }}
         >
           <Typography variant="body2">Vietnam</Typography>
